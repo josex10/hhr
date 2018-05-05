@@ -1,0 +1,40 @@
+.main{
+    background-image: url('../../../assets/img/valores.jpg');
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    width: 100vw;
+    color: white;
+
+
+	background-size:cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    box-shadow: 3px 3px 3px black;
+}
+
+h1 {
+    text-align: center;
+    font-size: 6vh;
+    padding: 3vh;
+}
+
+ul{
+    margin-left: 24vw;
+}
+li{
+    list-style: none;
+    font-size: 3vh;
+}
+
+i{
+    padding-right: 1vw;
+    color: #F99B32;
+}
+
+@media only screen and (max-width: 500px) {
+    ul{
+        margin-left: 10vw;
+    } 
+}
