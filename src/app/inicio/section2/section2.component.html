@@ -1,49 +1,96 @@
-<div class="principal">
+<div class="principal" id="section2">
     <div class="container">
 
         <!--Section: Features v.1-->
-        <section class="text-center">
+        <section>
       
             <!--Section heading-->
-            <h1 class="py-5 font-weight-bold">Nosotros</h1>
+            <h1 class="py-5 font-weight-bold text-center wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "ES"'>Nosotros</h1>
+            <h1 class="py-5 font-weight-bold text-center wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "EN"'>About Us</h1>
             <!--Section description-->
-            <p class="px-5 mb-5 pb-3 lead">
-                <strong>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam.
-                </strong>
-            </p>
-      
-            <!--Grid row-->
-            <div class="row">
-      
-                <!--Grid column-->
-                <div class="col-md-6">
-                    <i class="fa fa-dot-circle-o fa-4x red-text"></i>
-                    <h5 class="font-weight-bold mt-3">Misión</h5>
-                    <p class="text-dark">
-                        <strong>Ofrecerle a nuestros clientes soluciones de movimientos de tierra e infraestructura urbanística, bajo un alto estándar de calidad, servicio al cliente y profesionalismo.</strong>    
-                    </p>
-                </div>
-                <!--Grid column-->
-      
-                <!--Grid column-->
-                <div class="col-md-6">
-                    <i class="fa fa-eye fa-4x cyan-text"></i>
-                    <h5 class="font-weight-bold mt-3">Visión</h5>
-                    <p class="text-dark">
-                        <strong>
-                        Llevar a nuestra empresa a ocupar los primeros lugares en la industria de la construcción, consolidándonos como un proveedor de alto valor para nuestros clientes en sus proyectos.
-                        </strong>
-                    </p>
-                </div>
-                <!--Grid column-->
+            <div class="px-5 mb-5 pb-3 lead wow fadeInLeft nosotros" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "ES"'>
+
+                <p>
+                    <strong>
+                        Movimientos de Tierra HHR es una empresa 100 % costarricense, fundada en el año 1987 por el Señor Héctor Hernández Ramírez y 
+                        la señora Irene Flores Hidalgo, resultado de un emprendimiento familiar. De esta manera formalizan el negocio de transporte de materiales 
+                        y alquiler de Back Hoe.
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        Ahora liderada por Héctor Hernández Flores y con más de 30 años de experiencia en el mercado, se consolida como una empresa 
+                        que brinda soluciones de movimientos de tierra, pavimentos e infraestructura para sus clientes.
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        Gracias a nuestros precios competitivos y trato personalizado, acompañamos a nuestros clientes en sus proyectos, 
+                        brindándoles siempre soluciones alternativas y mejora constante para sus obras. 
+                    </strong>
+                </p>
             </div>
-            <!--Grid row-->
-      
+
+
+            <div class="px-5 mb-5 pb-3 lead wow fadeInLeft nosotros" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "EN"'>
+
+                <p>
+                    <strong>
+                        HHR Movimientos de Tierra is a 100% Costa Rican company, founded in 1987 by Mr. Héctor Hernández Ramírez and Mrs. Irene Flores Hidalgo, 
+                        result of a family entrepreneurship. In this way they formalized the business of materials transportation and backhoes rentals.
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        Now led by Hector Hernandez Flores and with over 30 years of experience in the market, has established itself as a 
+                        company that offers earthmoving, pavements and infrastructure solutions for its customers.
+                    </strong>
+                </p>
+
+                <p>
+                    <strong>
+                        Thanks to our competitive prices and personalized service, we accompany our clients in their projects, 
+                        making sure we provide them with alternative solutions and continuous improvement for their works.
+                    </strong>
+                </p>
+            </div>
         </section>
         <!--Section: Features v.1-->   
-      </div>
+
+        <div class="row valores">
+            <div class="col-md-6 padre">
+                <h1 class="py-5 font-weight-bold align-middle wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "ES"'>Valores</h1>
+                <h1 class="py-5 font-weight-bold align-middle wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "EN"'>Values</h1>
+                <!--
+                <h1 class="align-middle wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "ES"'>Valores</h1>
+                <h1 class="align-middle wow flipInY" data-wow-delay="0.3s" *ngIf='_AppService.lenguaje == "EN"'>Values</h1>
+                -->
+            </div>
+            <div class="col-md-6 padre" *ngIf='_AppService.lenguaje == "ES"'>
+                <ul>
+                    <li class="wow flipInY" data-wow-delay="0.1s"> <i class="fa fa-check" aria-hidden="true"> </i>Responsabilidad</li>
+                    <li class="wow flipInY" data-wow-delay="0.2s"> <i class="fa fa-check" aria-hidden="true"> </i>Trabajo en equipo</li>
+                    <li class="wow flipInY" data-wow-delay="0.3s"> <i class="fa fa-check" aria-hidden="true"> </i>Proactividad</li>
+                    <li class="wow flipInY" data-wow-delay="0.4s"> <i class="fa fa-check" aria-hidden="true"> </i>Determinación</li>
+                    <li class="wow flipInY" data-wow-delay="0.5s"> <i class="fa fa-check" aria-hidden="true"> </i>Transparencia</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 padre" *ngIf='_AppService.lenguaje == "EN"'>
+                <ul>
+                    <li class="wow flipInY" data-wow-delay="0.1s"> <i class="fa fa-check" aria-hidden="true"> </i>Responsibility</li>
+                    <li class="wow flipInY" data-wow-delay="0.2s"> <i class="fa fa-check" aria-hidden="true"> </i>Teamwork</li>
+                    <li class="wow flipInY" data-wow-delay="0.3s"> <i class="fa fa-check" aria-hidden="true"> </i>Proactivity</li>
+                    <li class="wow flipInY" data-wow-delay="0.4s"> <i class="fa fa-check" aria-hidden="true"> </i>Determination</li>
+                    <li class="wow flipInY" data-wow-delay="0.5s"> <i class="fa fa-check" aria-hidden="true"> </i>Transparency</li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
 </div>
 
 

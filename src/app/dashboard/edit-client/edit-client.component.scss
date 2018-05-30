@@ -1,0 +1,31 @@
+.principal{
+    position: relative;
+}
+
+h1{
+    text-align: center;
+}
+.father{
+    position: absolute;
+    top: 0%;
+    height: 100%;
+    width: 100%;
+}
+.loader {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+form{
+    padding: 2vw;
+    background-color: white;
+    border-radius: 5px 30px 45px 60px;
+    margin-bottom: 3vh;
+}
+
+label{
+    font-weight: bold;
+}

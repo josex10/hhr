@@ -1,0 +1,189 @@
+<div class="principal wow slideInRight" data-wow-delay="0.3s">
+
+  <div class="container">
+
+      <h1>Perfil Cliente</h1>
+
+      <!-- FORM-->
+      <form #addClientFrm='ngForm' (ngSubmit)="fnSaveClient(addClientFrm)">
+  
+          <div class="row">
+          <div class="col-md-6">
+              <label for="name">*Nombre</label>
+              <div class="md-form">
+                  <input type="text" class="form-control" id="name" name="name" ngModel #name='ngModel'
+                  requerido>
+                  <div *ngIf="name.touched">
+                      <div *ngIf="name.errors"> 
+                          <div *ngIf="name.errors.requerido" class="alert alert-danger"> 
+                              Campo requerido
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="col-md-6">
+              <label for="surname">*Apellidos</label>
+              <div class="md-form">
+                  <input type="text" class="form-control" id="surname" name="surname" ngModel #surname='ngModel' 
+                  requerido>
+                  <div *ngIf="surname.touched">
+                      <div *ngIf="surname.errors"> 
+                          <div *ngIf="surname.errors.requerido" class="alert alert-danger"> 
+                              Campo requerido
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+  
+          <div class="row">
+                <div class="col-md-6">
+                    <label for="company">*Empresa</label>
+                    <div class="md-form">
+                        <input type="text" class="form-control" id="company" name="company" ngModel #company='ngModel' 
+                        requerido>
+                        <div *ngIf="company.touched">
+                            <div *ngIf="company.errors"> 
+                                <div *ngIf="company.errors.requerido" class="alert alert-danger"> 
+                                    Campo requerido
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label for="company">Puesto</label>
+                    <div class="md-form">
+                        <input type="text" class="form-control" id="position" name="position" ngModel #position='ngModel'>
+                    </div>
+                </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-6">
+                  <label for="phone">*Teléfono</label>
+                  <div class="md-form">
+                      <input type="text" class="form-control" id="phone" name="phone" ngModel #phone='ngModel' 
+                      requerido>
+                      <div *ngIf="phone.touched">
+                          <div *ngIf="phone.errors"> 
+                              <div *ngIf="phone.errors.requerido" class="alert alert-danger"> 
+                                  Campo requerido
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="col-md-6">
+                  <label for="celphone">Teléfono Alternativo</label>
+                  <div class="md-form">
+                      <input type="text" class="form-control" id="celphone" name="celphone" ngModel #celphone='ngModel'>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-6">
+                  <label for="email">*Correo</label>
+                  <div class="md-form">
+                      <input type="email" class="form-control" id="email" name="email" ngModel #email='ngModel' 
+                      requerido validar-correo>
+                      <div *ngIf="email.touched">
+                          <div *ngIf="email.errors"> 
+                              <div *ngIf="email.errors.requerido" class="alert alert-danger"> 
+                                  Campo requerido
+                              </div>
+  
+                              <div *ngIf="email.errors.correoCorrecto" class="alert alert-danger"> 
+                                  Formato de correo inválido.
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <div class="col-md-6">
+                  <label for="alternativeEmail">Correo Alternativo</label>
+                  <div class="md-form">
+                      <input type="email" class="form-control" id="alternativeEmail" name="alternativeEmail" ngModel #alternativeEmail='ngModel'>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="row">
+              <div class="col-md-12">
+                  <label for="notes">Intereses</label>
+                  <div class="md-form">
+                      <textarea type="text" class="md-textarea form-control" id="notes" name="notes" ngModel #notes='ngModel' rows="3"></textarea>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="text-center">
+              <button type="submit" class="btn btn-primary relative waves-light" [disabled]="!addClientFrm.valid" mdbWavesEffect>Guardar Cambios</button>
+          </div>
+          
+      </form>
+  
+      <!-- LOADER-->
+      <div class="father" *ngIf="showSpinner">
+          <div class="loader">
+              <mdb-spinner spinnerType="big" spinnerColor="blue" class="loaderObj"></mdb-spinner>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<!-- SUCCESS MODAL-->
+<div mdbModal #successModal="mdb-modal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-success" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <p class="heading lead">HHR</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="successModal.hide()">
+                  <span aria-hidden="true" class="white-text">×</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="text-center">
+                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                  <p>{{savingMessage}}</p>
+              </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+              <a type="button" class="btn btn-primary waves-light" mdbWavesEffect (click)="successModal.hide()">Ok<i class="fa fa-check ml-1"></i></a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!--DANGER MODAL-->
+
+<div mdbModal #dangerModal="mdb-modal" class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-notify modal-danger" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <p class="heading lead">HHR</p>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="dangerModal.hide()">
+                  <span aria-hidden="true" class="white-text">×</span>
+              </button>
+          </div>
+          <div class="modal-body">
+              <div class="text-center">
+                  <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                  <p>{{savingMessage}}</p>
+              </div>
+          </div>
+          <div class="modal-footer justify-content-center">
+              <a type="button" class="btn btn-outline-secondary" data-dismiss="modal" (click)="dangerModal.hide()"mdbWavesEffect>Ok</a>
+          </div>
+      </div>
+  </div>
+</div>
+         

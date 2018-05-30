@@ -1,10 +1,37 @@
-img{
-    width: 100vw;
-    box-shadow: 3px 3px 3px black;
+/*
+.top-nav-collapse {
+    background-color: #82b1ff !important; 
+}
+.view {
+    height: 100vh !important;
+}
+.navbar:not(.top-nav-collapse) {
+    background: transparent !important;
 }
 
-@media only screen and (max-width: 800px) {
-    img{
-        padding-top: 10vh;
+img{
+    height: 30vh;
+}
+@media (max-width: 768px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #82b1ff !important;
     } 
 }
+
+h5 {
+    letter-spacing: 3px;
+}
+@media (max-width: 740px) {
+    .full-height,
+    .full-height body,
+    .full-height header,
+    .full-height header .view {
+        height: 700px; 
+    } 
+}
+
+.imgResponsive{
+    height: 100%;
+}
+
+*/

@@ -1,9 +1,30 @@
 .principal{
     padding-top: 10vh;
     padding-bottom: 10vh;
-    background-image: url('../../../assets/img/tiretrucks.jpg');
-    background-size:cover;
-	background-position: center center;
-    background-repeat: no-repeat;
+    background-image: url('../../../assets/img/pattern.jpg');
     box-shadow: 3px 3px 3px black;
+}
+
+.nosotros{
+    text-align: justify;
+}
+
+.padre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.valores{
+    margin: 8vh;
+}
+
+li{
+    list-style: none;
+    font-size: 3vh;
+}
+
+i{
+    padding-right: 1vw;
+    color: #F99B32;
 }

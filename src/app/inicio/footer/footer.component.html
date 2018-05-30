@@ -1,11 +1,54 @@
-  <!--Footer-->
-  <footer class="page-footer pt-4 mt-4">
-      <!--Copyright-->
-      <div class="footer-copyright text-center py-3">
-          <div class="container-fluid">
-              © 2018 Copyright: HHR / Diseñado por <a href="https://www.jodevelopers.com"> JODevelopers.com </a>
-          </div>
-      </div>
-      <!--/.Copyright-->
-  </footer>
-  <!--/.Footer-->
+<!--Footer-->
+<footer class="page-footer pt-4 mt-4">
+    <!--Copyright-->
+    <div class="footer-copyright text-center py-3">
+        <div class="container-fluid">
+            <h6 class="text-center" (click)="basicModal.show()">Login</h6>
+        </div>
+        <div class="container-fluid">
+            © 2018 Copyright: HHR / Diseñado por <a href="https://www.jodevelopers.com"> JODevelopers.com </a>
+        </div>
+    </div>
+    <!--/.Copyright-->
+</footer>
+<!--/.Footer-->
+
+<div mdbModal #basicModal="mdb-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true" [config]="{backdrop: false, ignoreBackdropClick: true}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title w-100" id="myModalLabel">Intranet</h4>
+            </div>
+            <form #loginForm="ngForm" (ngSubmit)="fnLogin(loginForm)">
+                <div class="modal-body">
+                    
+                        <div class="md-form">
+                            <i class="fa fa-envelope prefix grey-text"></i>
+                            <input type="text" name="frmEmail" ngModel #frmEmail="ngModel" id="frmEmail" class="form-control" placeholder="Correo">
+                            <span *ngIf="fnValidarEspaciosVacios(frmEmail) && frmEmail.touched" class="text-muted">{{mensajeDeErrorEspaciosVacios}}</span>
+                            <span *ngIf="fnValidarCorreo(frmEmail) && frmEmail.touched" class="text-muted">{{mensajeDeErrorCorreo}}</span>
+                        </div>
+
+                        <div class="md-form">
+                            <i class="fa fa-unlock-alt prefix grey-text"></i>
+                            <input type="password" name="frmPassword" ngModel #frmPassword="ngModel" id="frmPassword" class="form-control" placeholder="Contraseña">
+                            <span *ngIf="fnValidarEspaciosVacios(frmPassword) && frmPassword.touched" class="text-muted">{{mensajeDeErrorEspaciosVacios}}</span>
+                        </div>
+                        
+                        <div class="text-center">
+                            <button class="btn btn-primary relative waves-light" [disabled]="fnValidarEspaciosVacios(frmPassword) || 
+                            fnValidarEspaciosVacios(frmEmail) || fnValidarCorreo(frmEmail)" mdbWavesEffect >Login</button>
+                        </div>
+
+                        <h6>
+                            {{mensajeLogin}}
+                        </h6>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>

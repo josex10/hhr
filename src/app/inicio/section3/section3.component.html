@@ -1,18 +1,51 @@
 <div class="main mask rgba-black-light waves-light" mdbWavesEffect>
     <div class="container">
 
-        <h1>Valores</h1>
-
+         <!--Grid row-->
+         <div class="row MV">
       
-        <div class="row">
-            <ul>
-                <li> <i class="fa fa-check" aria-hidden="true"> </i>Responsabilidad</li>
-                <li> <i class="fa fa-check" aria-hidden="true"> </i>Trabajo en equipo</li>
-                <li> <i class="fa fa-check" aria-hidden="true"> </i>Proactividad</li>
-                <li> <i class="fa fa-check" aria-hidden="true"> </i>Determinacion</li>
-                <li> <i class="fa fa-check" aria-hidden="true"> </i>Transparencia</li>
-            </ul>
+            <!--Grid column-->
+            <div class="col-md-6 text-center" *ngIf='_AppService.lenguaje == "ES"'>
+                <i class="fa fa-dot-circle-o fa-4x red-text wow rollIn" data-wow-delay="0.2s"></i>
+                <h5 class="font-weight-bold mt-3 wow rollIn" data-wow-delay="0.3s">Misión</h5>
+                <p class="wow zoomIn" data-wow-delay="0.4s">
+                    <strong>Ofrecerle a nuestros clientes soluciones de movimientos de tierra e infraestructura urbanística, bajo un alto estándar de calidad, servicio al cliente y profesionalismo.</strong>    
+                </p>
+            </div>
+
+            <div class="col-md-6 text-center" *ngIf='_AppService.lenguaje == "EN"'>
+                <i class="fa fa-dot-circle-o fa-4x red-text wow rollIn" data-wow-delay="0.2s" ></i>
+                <h5 class="font-weight-bold mt-3 wow rollIn" data-wow-delay="0.3s">Mission</h5>
+
+                <p class="wow zoomIn" data-wow-delay="0.4s">
+                    <strong>Offer our clients solutions for earthmoving and urban infrastructure under a high standard of quality, customer service and professionalism.</strong>    
+                </p>
+            </div>
+            <!--Grid column-->
+    
+            <!--Grid column-->
+            <div class="col-md-6 text-center" *ngIf='_AppService.lenguaje == "ES"'>
+                <i class="fa fa-eye fa-4x cyan-text wow rollIn" data-wow-delay="0.2s"></i>
+                <h5 class="font-weight-bold mt-3 wow rollIn" data-wow-delay="0.3s">Visión</h5>
+                <p class="wow zoomIn" data-wow-delay="0.4s">
+                    <strong>
+                        Llevar a nuestra empresa a ocupar los primeros lugares en la industria de la construcción, consolidándonos como un proveedor de alto valor para nuestros clientes en sus proyectos.
+                    </strong>
+                </p>
+            </div>
+
+            <div class="col-md-6 text-center" *ngIf='_AppService.lenguaje == "EN"'>
+                <i class="fa fa-eye fa-4x cyan-text wow rollIn" data-wow-delay="0.2s"></i>
+                <h5 class="font-weight-bold mt-3 wow rollIn" data-wow-delay="0.3s">Vision</h5>
+                <p class="wow zoomIn" data-wow-delay="0.4s">
+                    <strong>
+                        Our vision is to take our company to occupy the first places in the construction industry, consolidating ourselves as a high value supplier for our clients in their projects.
+                    </strong>
+                </p>
+            </div>
+            <!--Grid column-->
         </div>
+            <!--Grid row-->
    
     </div>
 </div>

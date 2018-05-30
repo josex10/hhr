@@ -1,5 +1,5 @@
 .main{
-    background-image: url('../../../assets/img/valores.jpg');
+    background-image: url('../../../assets/img/20171118_133443_fondo_valores.jpg');
     padding-top: 10vh;
     padding-bottom: 10vh;
     width: 100vw;
@@ -14,27 +14,13 @@
     box-shadow: 3px 3px 3px black;
 }
 
-h1 {
-    text-align: center;
-    font-size: 6vh;
-    padding: 3vh;
+.MV{
+    color: white;
 }
 
-ul{
-    margin-left: 24vw;
-}
-li{
-    list-style: none;
-    font-size: 3vh;
-}
-
-i{
-    padding-right: 1vw;
-    color: #F99B32;
-}
-
-@media only screen and (max-width: 500px) {
-    ul{
-        margin-left: 10vw;
-    } 
+@media (max-width: 740px) {
+    .main{
+        background-color: black;
+        background-image: none;
+    }
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { AppService } from '../../services/app.services';
+
 @Component({
   selector: 'app-section4',
   templateUrl: './section4.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Section4Component implements OnInit {
 
-  constructor() { }
+  constructor(private _AppService : AppService) {}
 
   ngOnInit() {
   }

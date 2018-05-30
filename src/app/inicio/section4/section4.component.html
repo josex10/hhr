@@ -1,187 +1,657 @@
-<div class="principal">
+<div class="principal" id="section4">
     <div class="container">
 
-            <div class="row">
-                <h1>Nuestros Servicios</h1>
-            </div>
+            <section class="my-5">
+                <h1 class="h1-responsive font-weight-bold my-5 text-center"  *ngIf='_AppService.lenguaje == "ES"'>Nuestros Servicios</h1>
+                <h1 class="h1-responsive font-weight-bold my-5 text-center"  *ngIf='_AppService.lenguaje == "EN"'>Our Services</h1>
+            </section>
             
-            <div class="row">
-                <!-- Vertical Steppers -->
-                <div class="row m-t-1">
-                        <div class="col-md-12">
-                    
-                            <!-- Stepers Wrapper -->
-                            <ul class="stepper stepper-vertical">
-                    
-                                <!-- First Step -->
-                                <li>
-                                    <a href="#">
-                                        <span class="circle elegant-color textCircle">1</span>
-                                        <span class="label">Movimientos De Tierra</span>
-                                    </a>
 
-                                    <!-- Section Description -->
-                                    <div class="step-content grey lighten-3">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h1>Movimientos De Tierra</h1>
-                                                <ul>
-                                                    <li>-Corte y bote de tierra</li>
-                                                    <li>-Relleno con material de préstamo</li>
-                                                    <li>-Relleno con lastre compactado</li>
-                                                    <li>-Muro de Tierra armada</li>
-                                                    <li>-Excavacion en roca</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <!--Carousel Wrapper-->
-                                                <mdb-carousel [isControls]="false" [animation]="'slide'">
-                                                    <!--First slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio1_1.JPG" alt="First slide">
-                                                    </mdb-slide>
-                                                    <!--/First slide-->
-                                                    <!--Second slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio1_2.JPG" alt="Second slide">
-                                                    </mdb-slide>
-                                                    <!--/Second slide-->
-                                                </mdb-carousel>
-                                                <!--/.Carousel Wrapper-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                                <!-- Second Step -->
-                                <li>
-                                    <a href="#">
-                                            <span class="circle elegant-color textCircle">2</span>
-                                        <span class="label">Infraestructura urbanistica</span>
-                                    </a>
+        
 
-                                    <!-- Section Description -->
-                                    <div class="step-content grey lighten-3">
-                                        <div class="row">
-                                            
-                                            <div class="col-md-6">
-                                                <!--Carousel Wrapper-->
-                                                <mdb-carousel [isControls]="false" [animation]="'slide'">
-                                                    <!--First slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio2_1.JPG" alt="First slide">
-                                                    </mdb-slide>
-                                                    <!--/First slide-->
-                                                    <!--Second slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio2_2.JPG" alt="Second slide">
-                                                    </mdb-slide>
-                                                    <!--/Second slide-->
-                                                </mdb-carousel>
-                                                <!--/.Carousel Wrapper-->
-                                            </div>
+            <!-- Projects section v.3 -->
+            <section class="my-5">
 
-                                            <div class="col-md-6">
-                                                <h1>Infraestructura urbanistica</h1>
-                                                <ul>
-                                                    <li>-Sistemas Sanitarios</li>
-                                                    <li>-Sistemas pluviales</li>
-                                                    <li>-Sistemas de agua potable</li>
-                                                    <li>-Crodon y cano</li>
-                                                    <li>-Aceras</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                <!-- Movimientos De Tierra -->
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "ES"'>Movimientos De Tierra</h2>
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "EN"'>Earthmoving</h2>
 
-                                <!-- Third Step -->
-                                <li>
-                                    <a href="#">
-                                            <span class="circle elegant-color textCircle">3</span>
-                                        <span class="label">Pavimentos</span>
-                                    </a>
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
 
-                                    <!-- Section Description -->
-                                    <div class="step-content grey lighten-3">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <h1>Pavimentos</h1>
-                                                <ul>
-                                                    <li>-Colacacion de sub-base</li>
-                                                    <li>-Colocacion de base</li>
-                                                    <li>-Colocacion de carpeta asfaltica</li>
-                                                    <li>-Colocacion de adoquin</li>
-                                                    <li>-Tratamientos superficiales</li>
-                                                    <li>-Servicios de Bacheo</li>
-                                                </ul>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <!--Carousel Wrapper-->
-                                                <mdb-carousel [isControls]="false" [animation]="'slide'">
-                                                    <!--First slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio3_1.JPG" alt="First slide">
-                                                    </mdb-slide>
-                                                    <!--/First slide-->
-                                                    <!--Second slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio3_2.JPG" alt="Second slide">
-                                                    </mdb-slide>
-                                                    <!--/Second slide-->
-                                                </mdb-carousel>
-                                                <!--/.Carousel Wrapper-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
+                    <!-- Grid column -->
+                    <div class="col-lg-7 mb-lg-0 mb-5">
 
-                                <!-- Fourth Step -->
-                                <li>
-                                    <a href="#">
-                                        <span class="circle elegant-color textCircle">4</span>
-                                        <span class="label">Demolición</span>
-                                    </a>
+                        <!--Carousel Wrapper-->
+                        <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                <!--First slide-->
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/MovimientosTierra/1.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <!--/First slide-->
+                                <!--Second slide-->
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/MovimientosTierra/2.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <!--/Second slide-->
+                                <!--Third slide-->
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/MovimientosTierra/3.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <!--/Third slide-->
+                        </mdb-carousel>
+                            <!--/.Carousel Wrapper-->
+                    </div>
+                    <!-- Grid column -->
 
-                                    <!-- Section Description -->
-                                    <div class="step-content grey lighten-3">
-                                        <div class="row">
-                                            
-                                            <div class="col-md-6">
-                                                <!--Carousel Wrapper-->
-                                                <mdb-carousel [isControls]="false" [animation]="'slide'">
-                                                    <!--First slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio4_1.JPG" alt="First slide">
-                                                    </mdb-slide>
-                                                    <!--/First slide-->
-                                                    <!--Second slide-->
-                                                    <mdb-slide>
-                                                        <img class="d-block w-100" src="../../../assets/img/servicio4_2.JPG" alt="Second slide">
-                                                    </mdb-slide>
-                                                    <!--/Second slide-->
-                                                </mdb-carousel>
-                                                <!--/.Carousel Wrapper-->
-                                            </div>
+                    <!-- Grid column -->
+                    <div class="col-lg-5 textServices">
 
-                                            <div class="col-md-6">
-                                                <h1>Demolición</h1>
-                                                <ul>
-                                                    <li>-Demolición de edificios</li>
-                                                    <li>-Demolición de losas</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>                    
-                            </ul>
-                            <!-- /.Stepers Wrapper -->
-                    
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Corte y bote de tierra</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Cutting and dumping earth services</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                            
                         </div>
-                </div>
+                        <!-- Grid row -->
 
-                
-            </div>
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Relleno con material de préstamo</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Filling with loan material</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Relleno con lastre compactado</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Filling with compacted ballast</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div> 
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Muro de tierra armada</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Armed earth wall</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Excavación en roca</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Rock excavation</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                            
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Movimientos De Tierra-->
+
+                <hr class="my-5">
+
+                <!-- Infraestructura urbanistica -->
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "ES"'>Infraestructura urbanística</h2>
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "EN"'>Urban infrastructure</h2>
+
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
+
+                        
+    
+                        <!-- Grid column -->
+                        <div class="col-lg-5">
+    
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Sistemas sanitarios</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Sanitary systems</h5>
+                                </div>
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Sistemas pluviales</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Rainwater systems</h5>
+                                </div>
+                                
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Sistemas de agua potable</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Safe drinking water systems</h5>
+                                </div>
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Cordón y caño</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Cord pipe construction</h5>
+                                </div>
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Aceras</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Sidewalks</h5>
+                                </div>                
+                            </div>
+                            <!-- Grid row -->
+    
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7 mb-lg-0 mb-5">
+    
+                                <!--Carousel Wrapper-->
+                                <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/InfraestructuraUrbanistica/1.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/InfraestructuraUrbanistica/2.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/InfraestructuraUrbanistica/3.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/InfraestructuraUrbanistica/4.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/InfraestructuraUrbanistica/5.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                </mdb-carousel>
+                                    <!--/.Carousel Wrapper-->
+                        </div>
+                        <!-- Grid column -->
+    
+                </div>
+                <!-- Infraestructura urbanistica -->
+
+                <hr class="my-5">
+
+                <!-- Pavimentos -->
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "ES"'>Pavimentos</h2>
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "EN"'>Paving</h2>
+
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-7 mb-lg-0 mb-5">
+
+                        <!--Carousel Wrapper-->
+                        <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                <!--First slide-->
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/Pavimentos/1.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/Pavimentos/2.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/Pavimentos/3.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/Pavimentos/4.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                        </mdb-carousel>
+                            <!--/.Carousel Wrapper-->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-5 textServices">
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Colocación de sub-base</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Sub-base placement</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                            
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Colocación de base</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Base placement</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Colocación de carpeta asfaltica</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Asphalt pavement placement</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div> 
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Colocación de adoquín</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Cobblestone placement</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Tratamientos superficiales</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Superficial treatments</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div> 
+                        </div>
+                        <!-- Grid row -->
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Servicios de bacheo</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Street patching services</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div> 
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Pavimentos -->
+
+                <hr class="my-5">
+
+                <!-- Demolición -->
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "ES"'>Demolición</h2>
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "EN"'>Demolition</h2>
+
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
+
+                        
+    
+                        <!-- Grid column -->
+                        <div class="col-lg-5">
+    
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Demolición de edificios</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Demolition of buildings</h5>
+                                </div>
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Demolición de losas</h5>
+                                    <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Demolition of slabs</h5>
+                                </div>
+                                
+                            </div>
+                            <!-- Grid row -->
+    
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7 mb-lg-0 mb-5">
+    
+                                <!--Carousel Wrapper-->
+                                <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/servicio4_1.JPG" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/servicio4_2.JPG" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                </mdb-carousel>
+                                    <!--/.Carousel Wrapper-->
+                        </div>
+                        <!-- Grid column -->
+    
+                </div>
+                <!-- Demolición -->
+
+                <hr class="my-5">
+
+                <!-- Obras en rios -->
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "ES"'>Obras en ríos</h2>
+                <h2 class="h1-responsive font-weight-bold my-5 text-right" *ngIf='_AppService.lenguaje == "EN"'>Works on rivers</h2>
+
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
+
+                    <!-- Grid column -->
+                    <div class="col-lg-7 mb-lg-0 mb-5">
+
+                        <!--Carousel Wrapper-->
+                        <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                <!--First slide-->
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/ObrasEnRios/1.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                                <mdb-slide>
+                                        <img src="../../../assets/img/Servicios/ObrasEnRios/2.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                </mdb-slide>
+                        </mdb-carousel>
+                            <!--/.Carousel Wrapper-->
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-lg-5 textServices">
+
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Dragado de ríos</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Dredging services</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Extracción de materiales</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Material extraction</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div> 
+                        </div>
+                        <!-- Grid row -->
+                        <!-- Grid row -->
+                        <div class="row mb-3">
+                            <div class="col-md-11 col-10">
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Construcción de Diques</h5>
+                                <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Dikes construction</h5>
+                            </div>
+                            <div class="col-md-1 col-2">
+                                <i class="fa fa-certificate fa-2x cyan-text"></i>
+                            </div>
+                        </div>
+                        <!-- Grid row -->
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Obras en rios -->
+
+                <hr class="my-5">
+
+                <!-- Otros Servicios -->
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "ES"'>Otros Servicios</h2>
+                <h2 class="h1-responsive font-weight-bold my-5" *ngIf='_AppService.lenguaje == "EN"'>Other Services</h2>
+
+                <div  class="row wow slideInRight" data-wow-delay="0.1s">
+
+                        
+    
+                        <!-- Grid column -->
+                        <div class="col-lg-5">
+    
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                        <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Suministro de materiales granulares</h5>
+                                        <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Supply of granular materials</h5>
+                                </div>
+                            </div>
+                            <!-- Grid row -->
+                            <!-- Grid row -->
+                            <div class="row mb-3">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-2x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                        <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "ES"'>Alquiler de maquinaria</h5>
+                                        <h5 class="font-weight-bold mb-3" *ngIf='_AppService.lenguaje == "EN"'>Equipment rental</h5>
+                                    
+                                </div>
+                                
+                            </div>
+                            <!-- Grid row -->
+
+                            <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                <div class="col-md-1 col-2">
+                                    <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                </div>
+                                <div class="col-md-11 col-10">
+                                        <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Back Hoes</h5>
+                                        <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Back Hoes</h5>
+                                    
+                                </div>
+                                
+                            </div>
+                            <!-- Grid row -->
+
+                            <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Vagonetas</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Dump trucks</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+    
+                                <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Excavadoras</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Excavators</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Compactadoras</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Vibratory rollers</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+
+
+                              <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Tractores</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Bulldozers</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+                                
+                                <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Back hoe con martillo</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Back hoe with hammer attachment</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Excavadora con martillo</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Excavator with hammer attachment</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+
+                                <!-- Grid row -->
+                            <div class="row mb-3 itemList">
+                                    <div class="col-md-1 col-2">
+                                        <i class="fa fa-certificate fa-1x cyan-text"></i>
+                                    </div>
+                                    <div class="col-md-11 col-10">
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "ES"'>Tanques de agua</h5>
+                                            <h5 class="font-weight-bold mb-1" *ngIf='_AppService.lenguaje == "EN"'>Water trucks</h5>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- Grid row -->
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-lg-7 mb-lg-0 mb-5">
+    
+                                <!--Carousel Wrapper-->
+                                <mdb-carousel [isControls]="true" [animation]="'slide'">
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/OtrosServicios/1.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <!--/First slide-->
+                                        <!--First slide-->
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/OtrosServicios/2.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/OtrosServicios/3.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/OtrosServicios/4.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                        <mdb-slide>
+                                                <img src="../../../assets/img/Servicios/OtrosServicios/5.png" alt="Sample project image" class="img-fluid rounded z-depth-1">
+                                        </mdb-slide>
+                                </mdb-carousel>
+                                    <!--/.Carousel Wrapper-->
+                        </div>
+                        <!-- Grid column -->
+    
+                </div>
+                <!-- Otros Servicios -->
+
+                <hr class="my-5">
+
+            </section>
+            <!-- Projects section v.3 -->
+     
     </div>
 </div>
 

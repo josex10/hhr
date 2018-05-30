@@ -1,41 +1,49 @@
+<!--Main Navigation-->
+<header>
+    
+    <!--Navbar-->
+    <mdb-navbar SideClass="navbar navbar-expand-lg fixed-top navbar-light white scrolling-navbar ie-nav" [containerInside]="true">
+        <logo>
+            <a class="navbar-left"><img src="../../../assets/img/logo100px.png"></a>
+        </logo>
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="nav-link" href="#" *ngIf='_AppService.lenguaje == "ES"'>Inicio</a>
+                    <a class="nav-link" href="#" *ngIf='_AppService.lenguaje == "EN"'>Home</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="nav-link" href="#section2" *ngIf='_AppService.lenguaje == "ES"'>Nosotros</a>
+                    <a class="nav-link" href="#section2" *ngIf='_AppService.lenguaje == "EN"'>About Us</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="nav-link" href="#section4" *ngIf='_AppService.lenguaje == "ES"'>Servicios</a>
+                    <a class="nav-link" href="#section4" *ngIf='_AppService.lenguaje == "EN"'>Services</a>
+                </li>
+                <li class="nav-item waves-light" mdbWavesEffect>
+                    <a class="nav-link" href="#section5" *ngIf='_AppService.lenguaje == "ES"'>Contáctenos</a>
+                    <a class="nav-link" href="#section5" *ngIf='_AppService.lenguaje == "EN"'>Contact us</a>
+                </li>
+            </ul>
+        </links>
 
-<mdb-navbar SideClass="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar ie-nav" [containerInside]="true">
-
-    <logo>
-        <a class="navbar-left"><img src="../../../assets/img/logo100px.png"></a>
-    </logo>
-    <links>
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Inicio</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Servicios</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Nuestros Trabajos</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Contáctenos</a>
-            </li>
-        </ul>
-        <!--
-        <ul class="navbar-nav nav-flex-icons">
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Inicio</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Servicios</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Nuestros Trabajos</a>
-            </li>
-            <li class="nav-item waves-light" mdbWavesEffect>
-                <a class="nav-link">Contáctenos</a>
-            </li>
-        </ul>
-        
-        -->
-    </links>
-</mdb-navbar>
+        <links>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown" dropdown>
+                    <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect *ngIf='_AppService.lenguaje == "ES"'>
+                        Lenguaje<span class="caret"></span>
+                    </a>
+                    <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect *ngIf='_AppService.lenguaje == "EN"'>
+                        Language<span class="caret"></span>
+                    </a>
+                    <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                        <a class="dropdown-item waves-light" *ngIf='_AppService.lenguaje == "ES"' mdbWavesEffect (click)='fnCambiarLenguaje("EN")'>English</a>
+                        <a class="dropdown-item waves-light" *ngIf='_AppService.lenguaje == "EN"' mdbWavesEffect (click)='fnCambiarLenguaje("ES")'>Español</a>
+                    </div>
+                </li>
+            </ul>
+        </links>
+    </mdb-navbar>
+</header>
+<!--Main Navigation-->
       
